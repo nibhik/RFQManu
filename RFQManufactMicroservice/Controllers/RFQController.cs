@@ -32,7 +32,7 @@ namespace RFQManufactMicroservice.Controllers
             this.logger = logger;
         }
 
-        //[Authorize(Roles = "Admin")]
+        [Authorize(Roles = "Admin")]
         [HttpGet("GetRFQOfPlant/partid")]  
         public async Task<ActionResult<Rfq>> Get(int Id)
         {
@@ -100,7 +100,7 @@ namespace RFQManufactMicroservice.Controllers
         }
 
 
-        //[Authorize(Roles ="Admin")]
+        [Authorize(Roles ="Admin")]
         [HttpGet("GetPotentialVendorsOfRfq/")]
         
         public async Task<ActionResult<Supplier>> GetFeedback(int rId)
